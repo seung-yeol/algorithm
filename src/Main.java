@@ -1,9 +1,13 @@
-import 코딩테스트_고득점_Kit.완주하지못한선수;
+import 코딩테스트_고득점_Kit.정렬.K번째수;
+import 코딩테스트_고득점_Kit.해시.완주하지못한선수;
 
 public class Main {
 
     public static void main(String[] args) {
-        완주하지못한선수 완주 = new 완주하지못한선수();
-        System.out.println(완주.solution(new String[]{	"mislav", "stanko", "mislav", "ana", "bbbbbbbbbbbbbbbbbbbb"}, new String[]{	"stanko", "ana", "mislav", "mislav"}));
+        K번째수 k = new K번째수();
+        int[] s = k.solution(	new int[]{1, 5, 2, 6, 3, 7, 4}, new int[][]{{2, 5, 3}, {4, 4, 1}, {1, 7, 3}} );
+        for (Integer i : s) {
+            System.out.println(i);
+        }
     }
 }

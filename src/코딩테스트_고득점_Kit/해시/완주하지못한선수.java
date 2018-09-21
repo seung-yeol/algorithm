@@ -1,4 +1,4 @@
-package 코딩테스트_고득점_Kit;
+package 코딩테스트_고득점_Kit.해시;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,11 +39,9 @@ public class 완주하지못한선수 {
                         return s;
                     }
                 }
-
                 return s1.get(0);
             }
         }
-
         return answer;
     }
 
