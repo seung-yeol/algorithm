@@ -47,52 +47,13 @@ public class 더맵게 {
         if (childPosition < 2) {
             return;
         }
-        Integer me = list.get(childPosition / 2 - 1);
-        Integer left;
-        Integer right;
+        Integer parent = list.get(childPosition / 2 - 1);
+        Integer me = list.get(childPosition-1);
 
-        if (childPosition % 2 == 0) {
-            left = list.get(childPosition - 1);
-            if (list.size() != childPosition) {
-                right = list.get(childPosition);
-
-                if (left <= right) {
-                    if (left < me) {
-                        list.set(childPosition / 2 - 1, left);
-                        list.set(childPosition - 1, me);
-                        backHeapify(list, childPosition / 2);
-                    }
-                } else {
-                    if (right < me) {
-                        list.set(childPosition / 2 - 1, right);
-                        list.set(childPosition, me);
-                        backHeapify(list, childPosition / 2);
-                    }
-                }
-            } else {
-                if (left < me) {
-                    list.set(childPosition / 2 - 1, left);
-                    list.set(childPosition - 1, me);
-                    backHeapify(list, childPosition / 2);
-                }
-            }
-        } else {
-            left = list.get(childPosition - 2);
-            right = list.get(childPosition - 1);
-
-            if (left <= right) {
-                if (left < me) {
-                    list.set(childPosition / 2 - 1, left);
-                    list.set(childPosition - 2, me);
-                    backHeapify(list, childPosition / 2);
-                }
-            } else {
-                if (right < me) {
-                    list.set(childPosition / 2 - 1, right);
-                    list.set(childPosition - 1, me);
-                    backHeapify(list, childPosition / 2);
-                }
-            }
+        if (me < parent) {
+            list.set(childPosition / 2 - 1, me);
+            list.set(childPosition - 1, parent);
+            backHeapify(list, childPosition / 2);
         }
     }
 
