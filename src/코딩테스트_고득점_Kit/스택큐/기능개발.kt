@@ -9,9 +9,7 @@ fun main(args: Array<String>) {
 class 기능개발 {
     fun solution(progresses: IntArray, speeds: IntArray): IntArray {
         val answer = mutableListOf<Int>()
-        val queue = LinkedList<Pair<Int, Int>>().apply {
-            addAll(progresses.zip(speeds))
-        }
+        val queue = LinkedList<Pair<Int, Int>>( progresses.zip(speeds) )
 
         var i = 0
         while (queue.isNotEmpty()) {
