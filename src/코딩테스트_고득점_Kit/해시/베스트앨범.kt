@@ -23,7 +23,7 @@ class 베스트앨범 {
         val list = LinkedList<Int>()
         sumMap.toList().sortedByDescending {
             it.second
-        }.forEach { it ->
+        }.forEach {
             pq.clear()
             pq.addAll(map[it.first]!!)
 
