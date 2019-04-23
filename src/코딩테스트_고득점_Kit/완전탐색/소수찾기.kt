@@ -38,7 +38,7 @@ class 소수찾기 {
                 if (tmpL.size != l && !gg.contains(0)) trueL.add(tmpL.apply {addFirst(list[0])}.joinToString("").toInt())
             }
         }
-        
+
         val primeNums = LinkedList<Int>().apply { add(2) }
         val sqrt = Math.sqrt(list.joinToString("").toDouble()).toInt()
         if (sqrt >= 3)
